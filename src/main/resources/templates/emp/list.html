@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Emploees</title>
+    <link rel="stylesheet" type="text/css" href="emp.css" />
+</head>
+<body>
+<div th:replace="index::top"></div>
+empList
+<table border="1">
+    <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>邮箱</th>
+    </tr>
+    <tr th:each="user : ${emps}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.email}"></td>
+    </tr>
+</table>
+</body>
+</html>

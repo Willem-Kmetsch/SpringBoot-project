@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="emp.css" />
 </head>
 <body>
-Hello![[${session.user}]]
+<nav th:fragment="top">
+    [[${session.user}]]
+</nav>
+
+<a th:href="@{/emps}">getList</a>
+
+
+
 </body>
 </html>
