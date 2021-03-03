@@ -7,12 +7,14 @@
 </head>
 <body>
 <!--顶部栏-->
-<div th:replace="component/box::top"></div>
-<!--侧边栏-->
-<div th:replace="component/box::left"></div>
+<nav class="top" th:fragment="top">
+    [[${session.user}]]
+</nav>
 
-
-
-
+<nav class="left" th:fragment="left">
+    <a th:href="@{/index}">主页</a><br>
+    <a th:href="@{/emps}">员工列表</a><br>
+    <a>operator3</a><br>
+</nav>
 </body>
 </html>

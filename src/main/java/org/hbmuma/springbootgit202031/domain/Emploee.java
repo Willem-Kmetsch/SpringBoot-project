@@ -1,21 +1,21 @@
 package org.hbmuma.springbootgit202031.domain;
 
 public class Emploee {
-    int id;
+    Integer id;
     String name;
     String email;
 
-    public Emploee(int id, String name, String email){
+    public Emploee(Integer id, String name, String email){
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

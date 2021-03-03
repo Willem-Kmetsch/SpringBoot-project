@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>addEmploee</title>
     <link rel="stylesheet" type="text/css" href="emp.css" />
 </head>
 <body>
@@ -11,8 +11,11 @@
 <!--侧边栏-->
 <div th:replace="component/box::left"></div>
 
-
-
+<form th:action="@{/emp}" method="post">
+    姓名：<input type="text" name="name"><br>
+    邮箱：<input type="text" name="email"><br>
+    <button type="submit">提交</button>
+</form>
 
 </body>
 </html>

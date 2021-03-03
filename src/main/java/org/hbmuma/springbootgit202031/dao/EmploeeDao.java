@@ -23,7 +23,7 @@ public class EmploeeDao {
     private static int initId = 1006;
 
     public void save(Emploee emploee){
-        if(emploee.getId() == 0){
+        if(emploee.getId() == null){
             emploee.setId(initId++);
         }
         emploees.put(emploee.getId(), emploee);

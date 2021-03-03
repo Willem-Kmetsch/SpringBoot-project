@@ -23,11 +23,14 @@ public class MyController {
                         Map<String, String> map, HttpSession session){
         if(!StringUtils.isEmpty(username) && "123".equals(password)){
             session.setAttribute("user",username);
-            return "index";
+            return "redirect:/index";
         } else{
             map.put("msg","用户名密码错误");
             return "login";
         }
     }
 
+    // 到主页
+    @RequestMapping("/index")
+    public String returnToIndex(){ return "index"; }
 }

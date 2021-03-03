@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Collection;
 
@@ -19,5 +20,16 @@ public class EmploeeController {
         Collection<Emploee> emploees = emploeeDao.getAll();
         model.addAttribute("emps", emploees);
         return "emp/list";
+    }
+
+    @GetMapping("/emp")
+    public String toAddPage(){
+        return "emp/add";
+    }
+
+    @PostMapping("/emp")
+    public String addEmp(Emploee emploee){
+        emploeeDao.save(emploee);
+        return "redirect:/emps";
     }
 }

@@ -6,19 +6,30 @@
     <link rel="stylesheet" type="text/css" href="emp.css" />
 </head>
 <body>
-<div th:replace="index::top"></div>
-empList
+<!--顶部栏-->
+<div th:replace="component/box::top"></div>
+<!--侧边栏-->
+<div th:replace="component/box::left"></div>
+<!--添加员工按钮-->
+<a th:href="@{/emp}" type="submit">添加</a>
+<!--员工列表-->
 <table border="1">
     <tr>
         <th>序号</th>
         <th>姓名</th>
         <th>邮箱</th>
+        <th>操作</th>
     </tr>
     <tr th:each="user : ${emps}">
         <td th:text="${user.id}"></td>
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
+        <td>
+            <button th:action="emp">编辑</button>
+            <button>删除</button>
+        </td>
     </tr>
 </table>
+
 </body>
 </html>
