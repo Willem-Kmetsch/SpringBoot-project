@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Emploees</title>
-    <link rel="stylesheet" type="text/css" href="emp.css" />
+    <link rel="stylesheet" type="text/css" href="/css/empPage.css" />
 </head>
 <body>
 <!--顶部栏-->
@@ -25,7 +25,7 @@
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
         <td>
-            <button th:action="emp">编辑</button>
+            <a th:href="@{/emp/}+${user.id}">编辑</a>
             <button>删除</button>
         </td>
     </tr>
