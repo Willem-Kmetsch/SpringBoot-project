@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <link rel="stylesheet" type="text/css" href="/css/empPage.css" />
+</head>
+<body>
+<!--顶部栏-->
+<div th:replace="component/box::top"></div>
+<!--侧边栏-->
+<div th:replace="component/box::left"></div>
+
+<h1>status:[[${status}]]</h1>
+<h1>timestamp:[[${timestamp}]]</h1>
+
+
+</body>
+</html>
